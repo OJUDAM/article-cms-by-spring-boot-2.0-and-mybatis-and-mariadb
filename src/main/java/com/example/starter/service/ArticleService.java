@@ -6,4 +6,5 @@ import com.example.starter.dto.Article;
 
 public interface ArticleService {
 	public List<Article> getList();
+	
 }
