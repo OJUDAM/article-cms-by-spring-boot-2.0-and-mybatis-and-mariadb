@@ -17,6 +17,7 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 	
 	<!-- el 문법 -->
 	<%-- ${list} --%>
+	<!-- 자바버전 -->
 <%-- 	<h2>v1</h2>
 
 	<%
@@ -35,6 +36,8 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 		} 
 	%>
 	 --%>
+	 
+	 
 	 <!-- el의 장점은 request.getAttribute("article") 할 필요가 없다.-->
 	<h2>v2</h2>
 	<c:forEach items="${list}" var="article">
