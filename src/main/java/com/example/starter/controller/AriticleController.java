@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HomeController {
-	@RequestMapping("/home/main")
-	public String showList() {
-		return "메인화면 입니다.";
+public class AriticleController {
+	@RequestMapping("/article/list")
+	public String showMain() {
+		return "article/list";
 	}
 }
