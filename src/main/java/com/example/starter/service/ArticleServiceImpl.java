@@ -2,6 +2,7 @@ package com.example.starter.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ public class ArticleServiceImpl implements ArticleService {
 	ArticleDao articleDao;
 	
 	//ArticleService는 데이터 관련해서는 모두 Dao에게 위힘
-	
+	@Override
 	public List<Article> getList(){
 		
 		
@@ -32,5 +33,11 @@ public class ArticleServiceImpl implements ArticleService {
 		 * 
 		 * return list;
 		 */
+	}
+
+	@Override
+	public void add(Map<String, Object> param) {
+		// TODO Auto-generated method stub
+		articleDao.add(param);
 	}
 }
