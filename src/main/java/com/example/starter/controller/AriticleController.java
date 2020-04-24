@@ -40,6 +40,27 @@ public class AriticleController {
 		return "article/modify";
 	}
 	
+	@RequestMapping("/article/doModify")
+	@ResponseBody
+	public String doModify(@RequestParam Map<String, Object> param, long id) {
+		articleService.modify(param);
+		/* 매개변수 doAdd(String title, String body)대신 */
+		//articleService.add(param);
+		String msg = id+"번 게시물이 수정되었습니다.";
+		
+		StringBuilder sb = new StringBuilder();
+
+		//sb.append("<script>");
+		sb.append("alert('" + msg + "');");
+		sb.append("location.replace('./detail?id="+id +"');");
+		
+		sb.insert(0,  "<script>");
+		sb.append("</script>");
+		
+		return sb.toString();
+	}
+
+	
 	@RequestMapping("/article/list")
 	public String showList(Model model) {	
 
