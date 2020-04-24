@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 작성</title>
-<style>
+<!-- <style>
 	.con{
 		width:1000px;
 		margin: 0 auto;
@@ -29,7 +29,8 @@
 	.common-form > div >div > input[type="text"], .common-form > div >div > textarea{
 		width:200%;
 	}
-</style>
+</style> -->
+<link rel="stylesheet" href="/resource/common.css">
 </head>
 <body>
 	<h1>게시물 작성</h1>

@@ -11,6 +11,7 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티 사이트 - 게시물 리스트</title>
+<link rel="stylesheet" href="/resource/common.css">
 </head>
 <body>
 	<h1>게시물 리스트</h1>
