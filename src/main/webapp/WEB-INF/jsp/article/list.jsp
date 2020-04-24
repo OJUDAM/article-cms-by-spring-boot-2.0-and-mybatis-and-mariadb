@@ -45,6 +45,9 @@ List<Article> list = (List<Article>)request.getAttribute("list");
 	<div class="con">
 		<c:forEach items="${list}" var="article">
 			<section>번호 : ${article.id}, 제목 : ${article.title}</section>
+			<section>
+				<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title}</a>
+			</section>
 			<hr>
 		</c:forEach>
 	</div>
