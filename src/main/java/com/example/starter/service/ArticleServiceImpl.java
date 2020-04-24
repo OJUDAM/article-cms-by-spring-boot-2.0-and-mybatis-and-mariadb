@@ -52,4 +52,9 @@ public class ArticleServiceImpl implements ArticleService {
 		 * newId;
 		 */
 	}
+
+	@Override
+	public int getTotalCount() {
+		return articleDao.getTotalCount();
+	}
 }
