@@ -20,7 +20,6 @@ spring:
       minimum-idle: 2
       connection-test-query: SELECT 1
     
-    
   servlet:
     multipart:
       enabled: true
