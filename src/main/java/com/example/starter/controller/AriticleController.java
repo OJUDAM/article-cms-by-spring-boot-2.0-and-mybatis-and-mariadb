@@ -26,6 +26,8 @@ public class AriticleController {
 	public String showDetail(Model model, long id) {
 		Article article = articleService.getOne(id);
 		
+		articleService.hitUp(id);
+		
 		model.addAttribute("article",article);
 		
 		return "article/detail";
@@ -45,7 +47,7 @@ public class AriticleController {
 	public String doModify(@RequestParam Map<String, Object> param, long id) {
 		articleService.modify(param);
 		/* 매개변수 doAdd(String title, String body)대신 */
-		//articleService.add(param);
+		
 		String msg = id+"번 게시물이 수정되었습니다.";
 		
 		StringBuilder sb = new StringBuilder();
@@ -84,7 +86,6 @@ public class AriticleController {
 	public String doAdd(@RequestParam Map<String, Object> param) {
 		long newId = articleService.add(param);
 		/* 매개변수 doAdd(String title, String body)대신 */
-		//articleService.add(param);
 		String msg = newId+"번 게시물이 추가되었습니다.";
 		
 		StringBuilder sb = new StringBuilder();

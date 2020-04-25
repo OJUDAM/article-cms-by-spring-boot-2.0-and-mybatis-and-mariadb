@@ -2,18 +2,16 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<%
-List<Article> list = (List<Article>)request.getAttribute("list");
-%>
+
 <c:set var="pageName" value="게시물 리스트"/>
 <%@ include file="../part/head.jspf" %>
 
 	<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
 	<div class="con">
 		<c:forEach items="${list}" var="article">
-			<section>번호 : ${article.id}, 제목 : ${article.title}</section>
+			<%-- <section>번호 : ${article.id}, 제목 : ${article.title}, </section> --%>
 			<section>
-				<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title}</a>
+				<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title}, 조회수 : ${article.hit}</a>
 			</section>
 			<hr>
 		</c:forEach>
