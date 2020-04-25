@@ -2,39 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>커뮤니티 사이트 - 게시물 작성</title>
-<!-- <style>
-	.con{
-		width:1000px;
-		margin: 0 auto;
-	}
-	.common-form > div >*{
-		float:left;
-	}
-	.common-form > div::after{
-		content:"";
-		display:block;
-		clear:both;
-	}
-	.common-form > div > span{
-		width:50px;
-	}
-	.common-form > div >div{
-		width:calc(100%-50px);
-	}
-	.common-form > div >div > input[type="text"], .common-form > div >div > textarea{
-		width:200%;
-	}
-</style> -->
-<link rel="stylesheet" href="/resource/common.css">
-</head>
-<body>
-	<h1 class="con">게시물 작성</h1>
-	
+<c:set var="pageName" value="게시물 추가" />
+<%@ include file="../part/head.jspf" %>
 	<script>
 		function submitAddForm(form) {
 			form.title.value = form.title.value.trim();
@@ -52,6 +21,7 @@
 			form.submit();
 		}
 	</script>
+	
 	<form class="con common-form" action="./doAdd" method="POST"
 		onsubmit="submitAddForm(this); return false;">
 		<div>
@@ -76,5 +46,4 @@
 			</div>
 		</div>
 	</form>
-</body>
-</html>
+<%@ include file="../part/foot.jspf"%>

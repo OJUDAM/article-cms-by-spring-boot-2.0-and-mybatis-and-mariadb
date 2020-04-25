@@ -3,17 +3,9 @@
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>커뮤니티 사이트 - 게시물 수정</title>
+<c:set var="pageName" value="게시물 수정"/>
+<%@ include file="../part/head.jspf"%>
 
-<link rel="stylesheet" href="/resource/common.css">
-
-</head>
-<body>
-	<h1 class="con">게시물 수정</h1>
 	<script>
 		function submitModifyForm(form){
 				form.title.value=form.title.value.trim();
@@ -67,5 +59,4 @@
 		<a onclick="if ( confirm('삭제하시겠습니까?')== false) return flase;"
 			href="./doDelete?id${article.id}">게시물 삭제</a>
 	</div>
-</body>
-</html>
+<%@ include file="../part/foot.jspf" %>
