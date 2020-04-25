@@ -6,18 +6,20 @@
 <c:set var="pageName" value="게시물 리스트"/>
 <%@ include file="../part/head.jspf" %>
 
-	<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
-	<div class="con">
-		<c:forEach items="${list}" var="article">
-			<%-- <section>번호 : ${article.id}, 제목 : ${article.title}, </section> --%>
-			<section>
-				<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 : ${article.title}, 조회수 : ${article.hit}</a>
-			</section>
-			<hr>
-		</c:forEach>
-	</div>
+<h2 class="con">전체 게시물 개수 : ${totalCount}</h2>
+<div class="con">
+	<c:forEach items="${list}" var="article">
+		<%-- <section>번호 : ${article.id}, 제목 : ${article.title}, </section> --%>
+		<section>
+			<a href="./detail?id=${article.id}">번호 : ${article.id}, 제목 :
+				${article.title}, 조회수 : ${article.hit}</a>
+		</section>
+		<hr>
+	</c:forEach>
+</div>
 
-	<div class="btns con">
-		<a href="./add">게시물 추가</a>
-	</div>
+<div class="btns con">
+	<a href="./add">게시물 추가</a>
+</div>
+
 <%@ include file="../part/foot.jspf" %>

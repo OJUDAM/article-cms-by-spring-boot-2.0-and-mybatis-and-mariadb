@@ -25,10 +25,12 @@ public class AriticleController {
 	@RequestMapping("/article/detail")
 	public String showDetail(Model model, long id) {
 		Article article = articleService.getOne(id);
+		log.debug("조회수");
 		
 		articleService.hitUp(id);
 		
 		model.addAttribute("article",article);
+		
 		
 		return "article/detail";
 	}
@@ -46,13 +48,12 @@ public class AriticleController {
 	@ResponseBody
 	public String doModify(@RequestParam Map<String, Object> param, long id) {
 		articleService.modify(param);
-		/* 매개변수 doAdd(String title, String body)대신 */
-		
+	
 		String msg = id+"번 게시물이 수정되었습니다.";
 		
 		StringBuilder sb = new StringBuilder();
 
-		//sb.append("<script>");
+		
 		sb.append("alert('" + msg + "');");
 		sb.append("location.replace('./detail?id="+id +"');");
 		
