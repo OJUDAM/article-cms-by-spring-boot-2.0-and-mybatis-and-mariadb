@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.starter.service.MemberService;
-import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomeController {
 	@Autowired
