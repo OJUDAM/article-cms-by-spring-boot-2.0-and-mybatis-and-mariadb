@@ -44,4 +44,30 @@ public class MemberServiceImpl implements MemberService {
 		
 		return rs;
 	}
+
+	@Override
+	public Map<String, Object> join(Map<String, Object> param) {
+		memberDao.join(param);
+		
+		long newId = CUtil.getAsLong(param.get("id"));
+		
+		String resultCode = "";
+		String msg = "";
+		
+		if(newId ==0) {
+			resultCode = "F-1";
+			msg = "회원가입에 실패했습니다.";
+		}
+		else {
+			resultCode = "S-1";
+			msg = "회원가입 되었습니다.";
+		}
+		
+		Map<String, Object> rs = new HashMap<String, Object>();
+		rs.put("resultCode", resultCode);
+		rs.put("msg", msg);
+		rs.put("newId", newId);
+		
+		return rs;
+	}
 }
