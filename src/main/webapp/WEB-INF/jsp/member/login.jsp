@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:set var="pageName" value="회원가입" />
+<c:set var="pageName" value="로그인" />
 <%@ include file="../part/head.jspf" %>
 
 <script>
@@ -41,7 +41,7 @@
 	}
 </script>
 
-<form class="con common-form" action="./doJoin" method="POST"
+<form class="con common-form" action="./doLogin" method="POST"
 	  onsubmit="submitJoinForm(this); return false;">
 	  <div>
 	  		<span>로그인 ID</span>
@@ -60,10 +60,11 @@
 	  </div>
 	  
 	  <div>
-	  		<span>로그인 PW 확인</span>
+	  		<span>로그인 </span>
 	  		<div>
-	  			<input name="loginPwConfirm" type="text" placeholder="로그인  PW확인"
-	  					autofocus="autofocus" maxlength="30">
+	  			<input type="submit" value="로그인"> <input type="reset"
+	  				value="취소" onclick="history.back();">
+	  					
 	  		</div>
 	  </div>
 	  
