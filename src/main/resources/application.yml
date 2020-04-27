@@ -13,13 +13,7 @@ spring:
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/starter?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
     password: gachon654321
-    hikari:
-      connection-timeout: 5000
-      validation-timeout: 1000
-      maximum-pool-size: 30
       
-      
-    
   servlet:
     multipart:
       enabled: true
@@ -28,8 +22,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: dhwnkea@naver.com
-    password: tlqkf123
+    username:
+    password:
     properties:
       mail:
         smtp:
