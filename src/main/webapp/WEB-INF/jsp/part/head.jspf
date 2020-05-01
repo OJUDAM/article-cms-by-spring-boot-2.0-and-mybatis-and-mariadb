@@ -12,6 +12,7 @@
 </head>
 <body>
 	<h1 class="con">${pageName}</h1>
+	<main>
 	<div class="top-menu-1 con">
 		<a href="/home/main">메인</a>
 		
@@ -29,4 +30,5 @@
 		<c:if test="${isLogined}">
 			<a href="/article/add">게시물 작성</a>
 		</c:if>
+		
 	</div>

@@ -1,5 +1,15 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+/* 노말라이즈 */
+body, ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	
+}
+
 html{
 	font-family: "Noto Sans KR", sans-serif;
 }
@@ -7,13 +17,20 @@ html{
 	width: 1000px;
 	margin: 0 auto;
 }
-
+.table-box>table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.table-box>table td, .table-box>table th{
+	padding: 10px;
+	border: 1px solid black;
+}
 .common-form>div>*{
 	float: left;
 }
 
 .common-form>div::after{
-	/* content: ""; */
+	content: ""; 
 	display: block;
 	clear: both;
 }
@@ -30,9 +47,9 @@ html{
 }
 
 .top-menu-1 a::before{
-	content"[";
+	content:"[";
 }
 
 .top-menu-1 a::after{
-	content"]";
+	content:"]";
 }
