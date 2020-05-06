@@ -12,4 +12,8 @@ public interface MemberService {
 	public Member getMatchedOne(String loginId, String loginPw);
 
 	public Member getOne(long loginedMemberId);
+	
+	public void doChange(Map<String, Object> args);
+	
+	public void secession(long secession);
 }

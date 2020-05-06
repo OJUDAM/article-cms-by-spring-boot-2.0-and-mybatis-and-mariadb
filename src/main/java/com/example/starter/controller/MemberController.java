@@ -78,4 +78,35 @@ public class MemberController {
 		model.addAttribute("redirectUrl", "/member/login");
 		return "common/redirect";
 	}
+	
+	@RequestMapping("member/myPage")
+	public String myPage(Model model, HttpSession session) {
+		return "member/myPage";
+	}
+	
+	@RequestMapping("member/change")
+	public String modify(HttpSession session) {
+		return "member/change";
+	}
+	
+	@RequestMapping("member/doChange")
+	@ResponseBody
+	public String doChange(@RequestParam Map<String, Object> param) {
+		StringBuilder sb = new StringBuilder();
+		
+		memberService.doChange(param);
+		sb.append("<script>alert('회원정보수정이 완료되었습니다.');location.replace('/member/myPage');</script>");
+		
+		return sb.toString();
+	}
+	
+	@RequestMapping("member/secession")
+	public String secession(HttpSession session) {
+		long secession = (long)session.getAttribute("loginedMemberId");
+		memberService.secession(secession);
+		
+		session.removeAttribute("loginedMemberId");
+		
+		return "member/main";
+	}
 }

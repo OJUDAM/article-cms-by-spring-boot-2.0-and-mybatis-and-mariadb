@@ -81,4 +81,15 @@ public class MemberServiceImpl implements MemberService {
 	public Member getOne(long loginedMemberId) {
 		return memberDao.getOne(loginedMemberId);
 	}
+
+	@Override
+	public void doChange(Map<String, Object> args) {
+		memberDao.doChange(args);
+		
+	}
+
+	@Override
+	public void secession(long secession) {
+		memberDao.secession(secession);
+	}
 }

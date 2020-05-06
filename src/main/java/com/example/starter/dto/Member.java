@@ -12,4 +12,5 @@ public class Member {
 	private String regDate;
 	private String loginId;
 	private String loginPw;
+	private long delStatus;
 }

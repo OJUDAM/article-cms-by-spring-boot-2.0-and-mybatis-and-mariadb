@@ -1,3 +1,5 @@
+custom:
+  logoText:CUN
 mybatis:
   type-aliases-package: com.example.starter.dto
 server:

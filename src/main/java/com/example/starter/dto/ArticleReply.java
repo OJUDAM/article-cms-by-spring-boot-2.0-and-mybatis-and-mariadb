@@ -6,26 +6,27 @@ import org.springframework.web.util.HtmlUtils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Article {
+@EqualsAndHashCode
+public class ArticleReply {
 	private long id;
 	private String regDate;
-	private String title;
-	private String body;
-	private long hit;
-	private long memberId;
+	private long articleId;
 	private long boardId;
+	private long memberId;
+	private String body;
+	
 	private Map<String, String> extra;
 	
 	public String getBodyForPrint() {
-		String bodyForPrint = HtmlUtils.htmlEscape(body);
-		bodyForPrint = bodyForPrint.replace("\n","<br>");
+		String bodyForPrint=HtmlUtils.htmlEscape(body);
+		bodyForPrint = bodyForPrint.replace("\n", "<br>");
 		
 		return bodyForPrint;
 	}
-
 }

@@ -15,4 +15,9 @@ public interface MemberDao {
 	public Member getMatchedOne(String loginId, String loginPw);
 	
 	public Member getOne(long loginedMemberId);
+	
+	
+	public void secession(long secession);
+
+	public void doChange(Map<String, Object> args);
 }

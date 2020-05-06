@@ -22,7 +22,7 @@
 		}
 	</script>
 	
-	<form class="con common-form" action="./doAdd" method="POST"
+	<form class="con common-form" action="./doAdd"
 		onsubmit="submitAddForm(this); return false;">
 		<div>
 			<span> 제목 </span>

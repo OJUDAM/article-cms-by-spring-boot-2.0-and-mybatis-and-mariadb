@@ -28,4 +28,25 @@
 		FROM member
 		WHERE id = #{id}
 	</select>
+	
+	<update id ="secession" parameterType="long">
+		UPDATE member
+		SET delStatus =1
+		WHERE id = #{id}
+	</update>
+	
+	<update id="doChange" parameterType="map">
+		UPDATE member
+		SET regDate = NOW(),
+		loginId = #{loginId},
+		loginPw = #{loginPw}
+		WHERE id = #{id}
+	</update>
+	
+		<resultMap type="com.example.starter.dto.Member" id="Member">
+		<id property="id" column="id" />
+		<id property="regDate" column="regDate" />
+		<id property="loginId" column="loginId" />
+		<id property="loginPw" column="loginPw" />
+	</resultMap>
 </mapper> 

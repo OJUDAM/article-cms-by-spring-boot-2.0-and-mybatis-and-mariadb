@@ -17,8 +17,20 @@ public class CUtil {
 		else if(object instanceof String) {
 			return Long.parseLong((String)object);
 		}
-		return -1;
+		return 0;
 	}
-
 	
+	public static int getAsInt(Object num) {
+		if (num instanceof Long) {
+			return (int) num;
+		} else if (num instanceof Integer) {
+			return (int) num;
+		} else if (num instanceof String) {
+			return Integer.parseInt((String) num);
+		} else if (num instanceof BigInteger) {
+			return ((BigInteger) num).intValue();
+		}
+
+		return 0;
+	}
 }
